@@ -38,4 +38,14 @@ public class Article
         Content = content;
         ArticleCategoryId = articleCategoryId;
     }
+
+    public void Remove()
+    {
+        IsDeleted = true;
+    }
+
+    public void Activate()
+    {
+        IsDeleted = false;
+    }
 }

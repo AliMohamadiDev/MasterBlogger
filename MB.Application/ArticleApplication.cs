@@ -45,4 +45,18 @@ public class ArticleApplication : IArticleApplication
             ArticleCategoryId = artcle.ArticleCategoryId
         };
     }
+
+    public void Remove(long id)
+    {
+        var article = _articleRepository.Get(id);
+        article.Remove();
+        _articleRepository.Save();
+    }
+
+    public void Activate(long id)
+    {
+        var article = _articleRepository.Get(id);
+        article.Activate();
+        _articleRepository.Save();
+    }
 }
