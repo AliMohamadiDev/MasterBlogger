@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <Folder Include="ArticleCategoryAgg\Exceptions\" />
+    <Folder Include="ArticleAgg\" />
   </ItemGroup>
 
 </Project>
