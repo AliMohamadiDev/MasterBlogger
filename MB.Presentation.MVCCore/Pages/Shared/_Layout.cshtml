@@ -66,13 +66,7 @@
                         <a href="index.html" class="nav-link active ">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="blog.html" class="nav-link ">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="post.html" class="nav-link ">Post</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link ">Contact</a>
+                        <a asp-area="Administrator" asp-page="/Index" class="nav-link ">Admin Dashboard</a>
                     </li>
                 </ul>
                 <div class="navbar-text">
@@ -87,12 +81,13 @@
         </div>
     </nav>
 </header>
-
-<div class="container">
-    <div class="row">
-        @RenderBody()
+<main class="posts-listing col-lg-12">
+    <div class="container">
+        <div class="row">
+            @RenderBody()
+        </div>
     </div>
-</div>
+</main>
 
 <!-- Page Footer-->
 <footer class="main-footer">
