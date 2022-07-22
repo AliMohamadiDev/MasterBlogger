@@ -48,20 +48,18 @@
                     </td>
                     <td>@comment.CreationDate</td>
                     <td>
-                        @*@if (comment.status == Statuses.New)
+                        @if (comment.status == Statuses.New)
                         {
-                            <form method="post" asp-page-handler="Activate" class="float-left">
-                                <button class="btn btn-success">Activate</button>
+                            <form method="post" asp-page-handler="Confirm" class="float-left">
+                                <button class="btn btn-success">Confirm</button>
+                                <input type="hidden" name="id" value="@comment.Id"/>
+                            </form>
+                        
+                            <form method="post" asp-page-handler="Cancel" class="float-left">
+                                <button class="btn btn-danger">Cancel</button>
                                 <input type="hidden" name="id" value="@comment.Id"/>
                             </form>
                         }
-                        else
-                        {
-                            <form method="post" asp-page-handler="Remove" class="float-left">
-                                <button class="btn btn-danger">Remove</button>
-                                <input type="hidden" name="id" value="@comment.Id"/>
-                            </form>
-                        }*@
                     </td>
                 </tr>
             }
